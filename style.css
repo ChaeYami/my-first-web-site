@@ -1,0 +1,92 @@
+  .title {
+    color: black; text-decoration: none;
+  }
+
+  .mylink {
+    color:black; text-decoration: underline;
+  }
+  .mylink:focus, .mylink:hover {
+    background-color:#D2FFD2; text-decoration:none;
+
+  }
+  .ali {
+    color:#FF1493; text-decoration: none;
+  }
+  .ali:focus,
+  .ali:hover {
+    display: inline-block; /*lnline과 block의 중간*/
+    opacity: 0.5; /*흐림효과 (투명하게 하기)*/
+    transform: translateY(-1.5px); transition: 0.5s;
+  }
+  #nowview {
+    font-weight: bolder;
+  }
+
+  h1{
+    font-size: 50px;text-align: center; border-bottom:1.5px solid gray; margin: 0; padding: 20px;
+  }
+
+  #gr ol {  /*(ol이 여러개일 경우)부모의 id가 gr인, 즉 gr 아래에 있는 ol*/
+    border-right: 1.5px solid gray;
+    width: 95px; height: 100vh; /*높이를 화면에 맞게*/
+    margin: 0px;
+    padding-top: 20px; padding-bottom: 20px; padding-right: 20px; padding-left: 35px;
+    font-size: 18px;
+  }
+  #gr{
+    display: grid;
+    grid-template-columns: 157px 1fr;
+  }
+  #gr #article{
+    padding:20px;
+  }
+  #logo{
+    padding: 10px;
+    vertical-align: middle;
+    width: 80px;
+  }
+  h2 {
+    display: inline;
+    vertical-align: middle;
+  }
+
+  @media(max-width:800px){
+    #gr{
+      display: block;
+    }
+    #gr ol{
+      border-right: none;
+      height: auto;
+
+    }
+    h1{
+      border-bottom: none;
+    }
+    #logo {
+      width: 60px;
+      padding-top: 0; padding-bottom: 0;
+    }
+  }
+
+
+/* vertical-align 속성
+base : 기본값으로 부모 요소의 baseline 에 맞춥니다.
+
+sub : 아래첨자에 기준을 맞춰서 정렬합니다.
+
+super : 위첨자 기준으로 맞춰서 정렬합니다.
+
+text-top : 요소 상단을 부모 font 의 상단에 맞춥니다.
+
+text-botom : 요소 하단을 부모 font 의 하단에 맞춥니다.
+
+middle : 부모 요소의 중앙으로 맞춥니다.
+
+top : 부모 요소의 상단으로 맞춥니다.
+
+bottom : 부모 요소의 하단으로 맞춥니다.
+
+길이값 : 0px 는 baseline 과 같은 값입니다. 0px 을 기준으로 길이값을 통해 위와 아래로 위치를 조절할 수 있습니다. 마이너스는 baseline 아래로 내려갑니다.
+
+% : 0% 는 baseline 과 같은 값입니다. 길이값과 마찬가지로 0 을 기준으로 아래 위로 위치를 조절할 수 있습니다.
+*/

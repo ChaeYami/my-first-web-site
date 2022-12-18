@@ -5,20 +5,88 @@
     <meta charset="utf-8">
   </head>
 
+    <!--- ============== CSS 시작 ============== --->
+    <link rel="stylesheet" href="style.css">
+    <!--- ============== CSS 끝 ============== --->
+
   <body>
-    <h1><a href="index.html">WEB</a></h1>
-    <ol>
-      <li><a href="1.html">HTML</a></li>
-      <li><a href="2.html">CSS</a></li>
-      <li><a href="3.html">JavaScript</a></li>
-    </ol>
+    <h1><a class=title href="index.html">WEB</a></h1>
 
-    <h2>HTML</h2>
-    <img src="html_logo.png" width="100px">
-    <p><a href="https://www.w3.org/TR/2011/WD-html5-20110405/" target="_blank" title="html5 specification">Hypertext Markup Language (HTML)</a> is the standard markup language for <strong>creating <u>web</u> pages</strong> and webapplications.<br>Web browsers receive HTML documents from a webserver or from local storage and render them into multimedia webpages.<br> HTML describes the structure of a web page semanticallyand originally included cues for the appearance of the document.</p>
+      <!---
+      li: 목록의 항목
+      ol: orderd list 정렬 목록
+      ul: unordered list 비정렬 목록
+      menu: menu
+      --->
+    <div id="gr">
 
-    <img src="coding.jpg" width="400px">
+      <ol>
+        <li><a class=ali id="nowview" href="1.html">HTML</a></li>
+        <li><a class=ali href="2.html">CSS</a></li>
+        <li><a class=ali href="3.html">JavaScript</a></li>
+      </ol>
+          <!---
+      ==========html에서 a 태그 사용==========
+          <a></a> 하이퍼링크 걸기
+          <a href 클릭시 이동할 링크
+          <a traget 링크를 여는 방법
+                    _self 현재 페이지 (기본값)
+                    _blank 새 탭
+                    _parent 부모 페이지
+                    _top 최상위 페이지
+                    프레임이름 - 프레임 이름 명시
 
-    <p style="margin-top:20px;">HTML elements are the building blocks ofHTML pages. <br>With HTML constructs, images and other objects, suchas interactive forms, may be embedded into the rendered page. <br>Itprovides a means to create structured documents by denotingstructural semantics for text such as headings, paragraphs, lists,links, quotes and other items. <br>HTML elements are delineated bytags, written using angle brackets.</p>
+          css 에서 a 태그 사용
+          a:link 방문 전 // a:visited 방문 후 // a:hover 마우스 오버 a:active 클릭
+          --->
+          <!---
+       ==========클래스를 지정해 css 속성 지정==========
+          태그 안에서 또 줄마다 속성을 지정하고 싶을 땐 html로 클래스를 지정하고
+          선언에 클래스 이름 넣기
+          ex)
+          html :
+                <ol>
+                  <li><a href="1.html" class="saw">HTML</a></li>
+                  <li><a href="2.html" class="saw">CSS</a></li>
+                  <li><a href="3.html">JavaScript</a></li>
+                </ol>
+          css
+                .saw {
+                  color:gray;
+                }
+         첫번째 두번째 목록 글씨만 회색이 됨.
+
+       ==========id 선택자==========
+          class 는 순서대로 -> 두 개 이상 클래스 가진 애는 css에서 더 나중에 설정한 애로 바뀜
+          id(같은 id는 한번만 가능) 선택자를 사용하면 어디 있던 우선순위
+          (id >> class >> tag)
+          ex)
+          html :
+                <ol>
+                  <li><a href="1.html" class="saw">HTML</a></li>
+                  <li><a href="2.html" class="saw" id="active">CSS</a></li>
+                  <li><a href="3.html">JavaScript</a></li>
+                </ol>
+          css :
+                #active {
+                  color:red;
+                }
+                .saw {
+                  color:gray;
+                }
+          첫번째 회색 두번째 빨간색 됨
+          --->
+      <div id="article">
+        <h2>HTML</h2>
+        <img id="logo" src="html_logo.png">
+        <p><a class=mylink href="https://www.w3.org/TR/2011/WD-html5-20110405/" target="_blank" title="html5 specification">Hypertext Markup Language (HTML)</a> is the standard markup language for <strong>creating web pages</strong> and webapplications.<br>Web browsers receive HTML documents from a webserver or from local storage and render them into multimedia webpages.<br> HTML describes the structure of a web page semanticallyand originally included cues for the appearance of the document.</p>
+
+        <img src="coding.jpg" width="400px">
+
+        <p style="margin-top:20px;">HTML elements are the building blocks ofHTML pages. <br>With HTML constructs, images and other objects, suchas interactive forms, may be embedded into the rendered page. <br>Itprovides a means to create structured documents by denotingstructural semantics for text such as headings, paragraphs, lists,links, quotes and other items. <br>HTML elements are delineated bytags, written using angle brackets.</p>
+      </div>
+
+    </div>
+
   </body>
 </html>
