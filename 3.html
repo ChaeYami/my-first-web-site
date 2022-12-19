@@ -4,15 +4,63 @@
     <title>WEB1 - JavaScript</title>
     <meta charset="utf-8">
   </head>
+  <!---
+  <input type="button" value="night"
+  onclick="
+    document.querySelector('body').style.backgroundColor='black';
+    document.querySelector('body').style.color='white';
+    document.querySelector('.title').style.color='white';">
+
+  <input type="button" value="day"
+  onclick="
+    document.querySelector('body').style.backgroundColor='white';
+    document.querySelector('body').style.color='black';
+    document.querySelector('.title').style.color='black';
+  ">
+  ---->
+
+  <input id="night_day" type="button" value="night" onclick="
+    var target1 = document.querySelector('body');
+    if(this.value === 'night') {
+      target1.style.backgroundColor='black';
+      target1.style.color='white';
+      document.querySelector('.title').style.color='white';
+      this.value = 'day';
+
+      var alist = document.querySelectorAll('.ali');
+      var i = 0;
+      while(i < alist.length){
+        alist[i].style.color = '#E6FFE6';
+        i ++ ;
+      }
+    } else {
+      target1.style.backgroundColor='white';
+      target1.style.color='black';
+      document.querySelector('.title').style.color='black';
+      this.value = 'night';
+
+      var alist = document.querySelectorAll('.ali');
+      var i = 0;
+      while(i < alist.length){
+        alist[i].style.color = '#FF1493';
+        i ++ ;
+      }
+    }
+
+  ">
+      <!--- this = document.querySelector('#night_day')--->
 
   <!--- ============== CSS 시작 ============== --->
   <link rel="stylesheet" href="style.css">
   <!--- ============== CSS 끝 ============== --->
 
   <body>
+
     <h1><a class=title href="index.html">WEB</a></h1>
 
-    <grid id="gr">
+
+
+    <div id="gr">
 
       <ol>
         <li><a class=ali href="1.html">HTML</a></li>
@@ -20,7 +68,7 @@
         <li><a class=ali id="nowview" href="3.html">JavaScript</a></li>
       </ol>
 
-      <grid id="article">
+      <div id="article">
         <h2>JavaScript</h2>
         <img id="logo" src="js_logo.png">
         <p>JavaScript, often abbreviated as JS, <strong>is a programming language that is one of the core technologies of the World Wide Web</strong>, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on users' devices.</p>
@@ -32,9 +80,9 @@
         <p style="margin-top:20px;">JavaScript engines were originally used only in web browsers, but are now core components of some servers and a variety of applications. The most popular runtime system for this usage is Node.js.</p>
 
         <p style="margin-top:20px;">Although Java and JavaScript are similar in name, syntax, and respective standard libraries, the two languages are distinct and differ greatly in design.</p>
-      </grid>
+      </div>
 
-    </grid>
+    </div>
 
   </body>
 </html>
