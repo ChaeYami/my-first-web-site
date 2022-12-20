@@ -3,7 +3,7 @@
   }
 
   .mylink {
-    color:black; text-decoration: underline;
+    color:gray; text-decoration: underline;
   }
   .mylink:focus, .mylink:hover {
     background-color:#D2FFD2; text-decoration:none;

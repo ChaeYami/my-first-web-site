@@ -1,20 +1,23 @@
 var Links = {
   setColor : function(color){
     // self = document.querySelector('#night_day')
-    var alist = document.querySelectorAll('.ali');
-    var i = 0;
-    while(i < alist.length){
-      alist[i].style.color = color;
-      i ++ ; }
+    // var alist = document.querySelectorAll('.ali');
+    // var i = 0;
+    // while(i < alist.length){
+    //   alist[i].style.color = color;
+    //   i ++ ; }
+    $('.ali').css('color', color);
     }
 }
 
   var Body = {
     setColor:function (color) {
-      document.querySelector('body').style.color=color;
+      // document.querySelector('body').style.color=color;
+      $('body').css('color', color);
     }, // 객체의 property는 콤마로 구분
     setbgColor:function (color){
-      document.querySelector('body').style.backgroundColor=color;
+      // document.querySelector('body').style.backgroundColor=color;
+      $('body').css('backgroundColor',color);
     }
   }
 
@@ -24,15 +27,15 @@ var Links = {
       Body.setbgColor('black');
       document.querySelector('.title').style.color='white';
       self.value = 'day';
-      document.querySelector('.mylink').style.color='white';
-      Links.setColor('#E6FFE6');
+      // document.querySelector('.mylink').style.color='white';
+      Links.setColor('gray');
       }
     else {
       Body.setColor('black');
       Body.setbgColor('white');
       document.querySelector('.title').style.color='black';
       self.value = 'night';
-      document.querySelector('.mylink').style.color='black';
+      // document.querySelector('.mylink').style.color='black';
       Links.setColor('#FF1493');
     }
   }
